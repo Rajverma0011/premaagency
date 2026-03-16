@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- PAGE BACKGROUND -->
+
+<div class="bg-cover bg-center min-h-screen py-16"
+     style="background-image: url('{% static 'images/back5.jpg' %}');">
+
+<div class="max-w-6xl mx-auto px-6 py-12 bg-white/90 rounded-lg shadow-xl">
+
+<!-- PAGE TITLE -->
+
+<h2 class="text-3xl font-semibold text-center mb-10 text-black">
+Explore by Sanitary Category
+</h2>
+
+<!-- CATEGORY GRID -->
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+
+<!-- COMMODE -->
+
+<a href="/sanitary/commode">
+<img src="{% static 'images/commode.jpg' %}"
+class="w-full h-72 object-cover rounded-md hover:scale-105 transition duration-300">
+
+<p class="mt-4 text-lg tracking-wide text-black font-medium">
+COMMODE
+</p>
+</a>
+
+<!-- WASH BASIN -->
+
+<a href="/sanitary/washbasin">
+<img src="{% static 'images/washbasin.jpg' %}"
+class="w-full h-72 object-cover rounded-md hover:scale-105 transition duration-300">
+
+<p class="mt-4 text-lg tracking-wide text-black font-medium">
+WASH BASIN
+</p>
+</a>
+
+<!-- UTENSIL BASIN -->
+
+<a href="/sanitary/utensil_basin">
+<img src="{% static 'images/utensil_basin.jpg' %}"
+class="w-full h-72 object-cover rounded-md hover:scale-105 transition duration-300">
+
+<p class="mt-4 text-lg tracking-wide text-black font-medium">
+UTENSIL BASIN
+</p>
+</a>
+
+<!-- TAP -->
+
+<a href="/sanitary/tap">
+<img src="{% static 'images/tap.jpg' %}"
+class="w-full h-72 object-cover rounded-md hover:scale-105 transition duration-300">
+
+<p class="mt-4 text-lg tracking-wide text-black font-medium">
+TAP / TOTI
+</p>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

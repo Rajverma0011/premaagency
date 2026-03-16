@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- PAGE BACKGROUND -->
+
+<div class="bg-cover bg-center min-h-screen py-16"
+style="background-image: url('{% static 'images/back5.jpg' %}');">
+
+<div class="max-w-5xl mx-auto p-10">
+
+<div class="grid md:grid-cols-2 gap-10 items-center bg-white/90 p-8 rounded-xl shadow-xl">
+
+<!-- PRODUCT IMAGE -->
+
+<img src="{{ product.image.url }}" class="rounded-lg shadow-lg">
+
+<!-- PRODUCT DETAILS -->
+
+<div>
+
+<h1 class="text-3xl font-bold mb-4 text-black">
+{{ product.name }}
+</h1>
+
+<p class="text-black mb-2">
+<b>Category:</b> {{ product.category }}
+</p>
+
+<p class="text-black mb-2">
+<b>Brand:</b> {{ product.brand }}
+</p>
+
+<p class="text-2xl font-bold text-black mt-4">
+₹{{ product.price }}
+</p>
+
+<a
+href="https://wa.me/917985995508?text=Hello I want {{ product.name }}"
+class="btn btn-success mt-6">
+
+WhatsApp Inquiry
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

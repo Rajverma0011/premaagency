@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- PAGE BACKGROUND -->
+
+<div class="bg-cover bg-center py-16"
+     style="background-image: url('{% static 'images/back3.jpg' %}');">
+
+  <div class="max-w-5xl mx-auto p-10">
+
+```
+<div class="grid md:grid-cols-2 gap-10 items-center bg-white/90 p-6 rounded-xl shadow-xl">
+
+  <!-- TILE IMAGE -->
+  <img src="{{ tile.image.url }}" class="rounded-lg shadow-lg">
+
+  <!-- TILE DETAILS -->
+  <div>
+
+    <h1 class="text-3xl font-bold mb-4 text-black">
+      {{ tile.name }}
+    </h1>
+
+    <p class="text-black mb-2">
+      <b>Size:</b> {{ tile.size }}
+    </p>
+
+    <p class="text-black mb-2">
+      <b>Material:</b> {{ tile.material }}
+    </p>
+
+    <p class="text-black mb-2">
+      <b>Color:</b> {{ tile.color }}
+    </p>
+
+    <p class="text-xl font-bold text-black mt-4">
+      ₹{{ tile.price }}
+    </p>
+
+    <a
+    href="https://wa.me/917985995508?text=Hello I want {{ tile.name }}"
+    class="btn btn-success mt-6">
+
+    WhatsApp Inquiry
+
+    </a>
+
+  </div>
+
+</div>
+```
+
+  </div>
+
+</div>
+
+{% endblock %}

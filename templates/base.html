@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prema Agency Tiles</title>
+    <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
+</head>
+
+<body class="bg-red-100">
+
+<!-- NAVBAR -->
+<div class="navbar bg-black text-white px-8">
+
+    <div class="flex-1">
+        <a class="text-xl font-bold">
+            Prema Agency
+        </a>
+    </div>
+
+    <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+            <li><a href="/">Home</a></li>
+            <li><a href="/tiles">Tiles</a></li>
+             <li><a href="/sanitary">Sanitary</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+         
+        </ul>
+    </div>
+
+</div>
+
+<!-- PAGE CONTENT -->
+{% block content %}
+{% endblock %}
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a 
+href="https://wa.me/917985995508"
+class="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600">
+
+WhatsApp
+
+</a>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- SECTION BACKGROUND -->
+ <div class="py-12 bg-cover bg-center" 
+     style="background-image: url('{% static "images/back3.jpg" %}');">
+
+<div class="max-w-6xl mx-auto px-6">
+
+<!-- PAGE TITLE -->
+<h2 class="text-3xl font-semibold text-center mb-12 text-black">
+Explore by Space
+</h2>
+
+<!-- CATEGORY GRID -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center mb-16">
+
+<!-- ================= BATHROOM ================= -->
+<a href="/category/washroom">
+
+<img src="{% static 'images/bathroom.jpg' %}"
+class="w-full h-72 object-cover rounded-md hover:scale-105 transition duration-300">
+
+<p class="mt-4 text-lg tracking-wide text-black font-semibold uppercase">
+BATHROOM
+</p>
+
+</a>
+
+<!-- ================= LIVING ROOM ================= -->
+<a href="/category/living">
+
+<img src="{% static 'images/livingroom.jpg' %}"
+class="w-full h-72 object-cover rounded-md hover:scale-105 transition duration-300">
+
+<p class="mt-4 text-lg tracking-wide text-black font-semibold uppercase">
+LIVING ROOM
+</p>
+
+</a>
+
+<!-- ================= OUTDOOR ================= -->
+<a href="/category/outdoor">
+
+<img src="{% static 'images/outdoor.jpg' %}"
+class="w-full h-72 object-cover rounded-md hover:scale-105 transition duration-300">
+
+<p class="mt-4 text-lg tracking-wide text-black font-semibold uppercase">
+OUTDOOR
+</p>
+
+</a>
+
+<!-- ================= KITCHEN ================= -->
+<a href="/category/kitchen">
+
+<img src="{% static 'images/kitchen.jpg' %}"
+class="w-full h-72 object-cover rounded-md hover:scale-105 transition duration-300">
+
+<p class="mt-4 text-lg tracking-wide text-black font-semibold uppercase">
+KITCHEN
+</p>
+
+</a>
+
+<!-- ================= BEDROOM ================= -->
+<a href="/category/bedroom">
+
+<img src="{% static 'images/bedroom.jpg' %}"
+class="w-full h-72 object-cover rounded-md hover:scale-105 transition duration-300">
+
+<p class="mt-4 text-lg tracking-wide text-black font-semibold uppercase">
+BEDROOM
+</p>
+
+</a>
+
+<!-- ================= COMMERCIAL ================= -->
+<a href="/category/commercial">
+
+<img src="{% static 'images/commercial.jpg' %}"
+class="w-full h-72 object-cover rounded-md hover:scale-105 transition duration-300">
+
+<p class="mt-4 text-lg tracking-wide text-black font-semibold uppercase">
+COMMERCIAL SPACES
+</p>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
