@@ -13,41 +13,49 @@
 
 <body class="bg-white">
 
+
 <!-- ================= NAVBAR ================= -->
+<nav class="bg-black text-white sticky top-0 z-50">
+	<div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+		<!-- LOGO -->
+		<div class="font-bold text-lg md:text-xl whitespace-nowrap">
+			Prema Agency
+		</div>
+		<!-- DESKTOP MENU -->
+		<div class="hidden md:flex gap-8 text-sm md:text-base items-center">
+			<a href="/" class="hover:text-green-400 transition">Home</a>
+			<a href="/tiles" class="hover:text-green-400 transition">Tiles</a>
+			<a href="/sanitary" class="hover:text-green-400 transition">Sanitary</a>
+			<a href="/contact" class="hover:text-green-400 transition">Contact</a>
+		</div>
+		<!-- MOBILE MENU BUTTON -->
+		<button id="mobile-menu-toggle" class="md:hidden focus:outline-none">
+			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+			</svg>
+		</button>
+	</div>
+	<!-- MOBILE MENU DROPDOWN -->
+	<div id="mobile-menu" class="md:hidden hidden flex-col gap-2 px-4 pb-4">
+		<a href="/" class="hover:text-green-400 transition">Home</a>
+		<a href="/tiles" class="hover:text-green-400 transition">Tiles</a>
+		<a href="/sanitary" class="hover:text-green-400 transition">Sanitary</a>
+		<a href="/contact" class="hover:text-green-400 transition">Contact</a>
+	</div>
+</nav>
 
-<div class="bg-black text-white sticky top-0 z-50">
-
-<div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-
-<!-- LOGO -->
-
-<div class="font-bold text-lg md:text-xl whitespace-nowrap">
-Prema Agency
-</div>
-
-<!-- DESKTOP MENU -->
-
-<div class="hidden md:flex gap-8 text-sm md:text-base items-center">
-<a href="/" class="hover:text-green-400 transition">Home</a>
-<a href="/tiles" class="hover:text-green-400 transition">Tiles</a>
-<a href="/sanitary" class="hover:text-green-400 transition">Sanitary</a>
-<a href="/contact" class="hover:text-green-400 transition">Contact</a>
-</div>
-
-<!-- MOBILE MENU (INLINE FIX) -->
-
-<div class="md:hidden overflow-x-auto">
-<div class="flex gap-6 text-sm whitespace-nowrap">
-<a href="/">Home</a>
-<a href="/tiles">Tiles</a>
-<a href="/sanitary">Sanitary</a>
-<a href="/contact">Contact</a>
-</div>
-</div>
-
-</div>
-
-</div>
+<script>
+	// Mobile menu toggle
+	document.addEventListener('DOMContentLoaded', function() {
+		const toggle = document.getElementById('mobile-menu-toggle');
+		const menu = document.getElementById('mobile-menu');
+		if (toggle && menu) {
+			toggle.addEventListener('click', function() {
+				menu.classList.toggle('hidden');
+			});
+		}
+	});
+</script>
 
 <!-- ================= CONTENT ================= -->
 
