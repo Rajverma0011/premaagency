@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
 
 ```
-<!-- IMPORTANT -->
+<!-- RESPONSIVE -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Prema Agency</title>
@@ -19,29 +19,32 @@
 
 <body class="bg-red-100">
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 
-<div class="navbar bg-black text-white px-4 md:px-8">
+<div class="navbar bg-black text-white px-4 md:px-8 py-2">
 
 ```
+<!-- LOGO -->
 <div class="flex-1">
-    <a class="text-lg md:text-xl font-bold">Prema Agency</a>
+    <a class="text-lg md:text-xl font-bold whitespace-nowrap">
+        Prema Agency
+    </a>
 </div>
 
-<!-- DESKTOP -->
-<div class="hidden md:flex">
-    <ul class="menu menu-horizontal px-1">
-        <li><a href="/">Home</a></li>
-        <li><a href="/tiles">Tiles</a></li>
-        <li><a href="/sanitary">Sanitary</a></li>
-        <li><a href="/contact">Contact</a></li>
+<!-- DESKTOP MENU (ONE LINE FIXED) -->
+<div class="hidden md:flex items-center">
+    <ul class="menu menu-horizontal gap-6 text-sm md:text-base">
+        <li><a href="/" class="hover:text-green-400">Home</a></li>
+        <li><a href="/tiles" class="hover:text-green-400">Tiles</a></li>
+        <li><a href="/sanitary" class="hover:text-green-400">Sanitary</a></li>
+        <li><a href="/contact" class="hover:text-green-400">Contact</a></li>
     </ul>
 </div>
 
 <!-- MOBILE MENU -->
 <div class="md:hidden">
     <details class="dropdown dropdown-end">
-        <summary class="btn btn-ghost text-white">☰</summary>
+        <summary class="btn btn-ghost text-white text-xl">☰</summary>
         <ul class="menu dropdown-content mt-3 p-2 shadow bg-black text-white rounded-box w-40">
             <li><a href="/">Home</a></li>
             <li><a href="/tiles">Tiles</a></li>
@@ -54,16 +57,16 @@
 
 </div>
 
-<!-- CONTENT -->
+<!-- ================= CONTENT ================= -->
 
 <div class="px-4 md:px-6">
 {% block content %}{% endblock %}
 </div>
 
-<!-- WHATSAPP -->
+<!-- ================= WHATSAPP ================= -->
 
 <a href="https://wa.me/917985995508"
-class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg z-50">
+class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg z-50 hover:bg-green-600 transition">
 WhatsApp </a>
 
 </body>
