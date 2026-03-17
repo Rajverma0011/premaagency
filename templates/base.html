@@ -4,69 +4,49 @@
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-
-```
-<!-- RESPONSIVE -->
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Prema Agency</title>
 
 <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
-```
-
 </head>
 
-<body class="bg-red-100">
+<body class="bg-white">
 
-<!-- ================= NAVBAR ================= -->
+<!-- NAVBAR -->
 
-<div class="navbar bg-black text-white px-4 md:px-8 py-2">
+<div class="bg-black text-white px-4 py-3">
 
-```
+<div class="flex items-center justify-between">
+
 <!-- LOGO -->
-<div class="flex-1">
-    <a class="text-lg md:text-xl font-bold whitespace-nowrap">
-        Prema Agency
-    </a>
+
+<div class="font-bold text-lg whitespace-nowrap">
+Prema Agency
 </div>
 
-<!-- DESKTOP MENU (ONE LINE FIXED) -->
-<div class="hidden md:flex items-center">
-    <ul class="menu menu-horizontal gap-6 text-sm md:text-base">
-        <li><a href="/" class="hover:text-green-400">Home</a></li>
-        <li><a href="/tiles" class="hover:text-green-400">Tiles</a></li>
-        <li><a href="/sanitary" class="hover:text-green-400">Sanitary</a></li>
-        <li><a href="/contact" class="hover:text-green-400">Contact</a></li>
-    </ul>
-</div>
+<!-- MENU (SCROLLABLE MOBILE FIX) -->
 
-<!-- MOBILE MENU -->
-<div class="md:hidden">
-    <details class="dropdown dropdown-end">
-        <summary class="btn btn-ghost text-white text-xl">☰</summary>
-        <ul class="menu dropdown-content mt-3 p-2 shadow bg-black text-white rounded-box w-40">
-            <li><a href="/">Home</a></li>
-            <li><a href="/tiles">Tiles</a></li>
-            <li><a href="/sanitary">Sanitary</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </details>
+<div class="overflow-x-auto">
+<div class="flex gap-6 text-sm whitespace-nowrap">
+
+<a href="/">Home</a> <a href="/tiles">Tiles</a> <a href="/sanitary">Sanitary</a> <a href="/contact">Contact</a>
+
 </div>
-```
+</div>
 
 </div>
 
-<!-- ================= CONTENT ================= -->
+</div>
 
-<div class="px-4 md:px-6">
+<!-- CONTENT -->
+
 {% block content %}{% endblock %}
-</div>
 
-<!-- ================= WHATSAPP ================= -->
+<!-- WHATSAPP -->
 
 <a href="https://wa.me/917985995508"
-class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg z-50 hover:bg-green-600 transition">
+class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg z-50">
 WhatsApp </a>
 
 </body>
