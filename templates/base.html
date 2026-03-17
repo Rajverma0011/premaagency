@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
 
 ```
-<!-- MOBILE RESPONSIVE MUST -->
+<!-- IMPORTANT -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Prema Agency Tiles</title>
+<title>Prema Agency</title>
 
 <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
 ```
@@ -24,32 +24,29 @@
 <div class="navbar bg-black text-white px-4 md:px-8">
 
 ```
-<!-- LOGO -->
 <div class="flex-1">
-    <a class="text-lg md:text-xl font-bold">
-        Prema Agency
-    </a>
+    <a class="text-lg md:text-xl font-bold">Prema Agency</a>
 </div>
 
-<!-- DESKTOP MENU -->
-<div class="hidden md:flex flex-none">
+<!-- DESKTOP -->
+<div class="hidden md:flex">
     <ul class="menu menu-horizontal px-1">
         <li><a href="/">Home</a></li>
         <li><a href="/tiles">Tiles</a></li>
         <li><a href="/sanitary">Sanitary</a></li>
-        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="/contact">Contact</a></li>
     </ul>
 </div>
 
 <!-- MOBILE MENU -->
 <div class="md:hidden">
     <details class="dropdown dropdown-end">
-        <summary class="btn btn-ghost text-white text-xl">☰</summary>
+        <summary class="btn btn-ghost text-white">☰</summary>
         <ul class="menu dropdown-content mt-3 p-2 shadow bg-black text-white rounded-box w-40">
             <li><a href="/">Home</a></li>
             <li><a href="/tiles">Tiles</a></li>
             <li><a href="/sanitary">Sanitary</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
     </details>
 </div>
@@ -57,22 +54,17 @@
 
 </div>
 
-<!-- CONTENT WRAPPER -->
+<!-- CONTENT -->
 
 <div class="px-4 md:px-6">
-{% block content %}
-{% endblock %}
+{% block content %}{% endblock %}
 </div>
 
-<!-- WHATSAPP BUTTON -->
+<!-- WHATSAPP -->
 
-<a 
-href="https://wa.me/917985995508"
-class="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 z-50">
-
-WhatsApp
-
-</a>
+<a href="https://wa.me/917985995508"
+class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg z-50">
+WhatsApp </a>
 
 </body>
 </html>

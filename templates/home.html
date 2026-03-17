@@ -6,30 +6,36 @@
 <!-- ================= HERO SECTION ================= -->
 
 <div 
-class="hero min-h-[65vh] md:min-h-[85vh] bg-cover bg-center relative"
+class="hero h-[85vh] md:h-screen bg-cover bg-center relative"
 style="background-image: url('{% static 'images/home3.jpg' %}');">
+
+<!-- DARK OVERLAY -->
 
 <div class="absolute inset-0 bg-black/60"></div>
 
-<div class="hero-content text-center relative z-10 text-white px-4">
+<!-- CONTENT -->
 
-<div class="max-w-xl mx-auto">
+<div class="hero-content flex items-center justify-center text-center relative z-10 text-white w-full px-4">
 
-<h1 class="text-3xl md:text-5xl font-bold mb-3 md:mb-4 leading-tight">
+<div class="max-w-lg w-full">
+
+<h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
 Prema Agency
 </h1>
 
-<p class="text-sm md:text-lg mb-5 md:mb-6 text-gray-200">
+<p class="text-sm md:text-lg mb-6 text-gray-200">
 Premium Tiles & Sanitary Ware in Parsrampur
 </p>
 
-<div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+<!-- BUTTONS -->
 
-<a href="/tiles" class="btn btn-success w-full sm:w-auto">
+<div class="flex flex-col gap-4">
+
+<a href="/tiles" class="btn btn-success w-full">
 Explore Tiles
 </a>
 
-<a href="/sanitary" class="btn btn-success w-full sm:w-auto">
+<a href="/sanitary" class="btn btn-success w-full">
 Explore Sanitary Ware
 </a>
 
@@ -41,7 +47,7 @@ Explore Sanitary Ware
 
 </div>
 
-<!-- ================= WHY CHOOSE + CONTACT ================= -->
+<!-- ================= WHY CHOOSE SECTION ================= -->
 
 <section class="bg-gray-900 text-white py-14 md:py-24">
 
@@ -53,43 +59,43 @@ Why Choose Prema Agency
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
 
-<!-- CARD -->
+<!-- CARD 1 -->
 
 <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg">
-<h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+<h3 class="text-lg md:text-xl font-semibold mb-3">
 Premium Quality
 </h3>
-<p class="text-gray-300 text-sm md:text-base leading-relaxed">
+<p class="text-gray-300 text-sm md:text-base">
 We offer high-quality tiles and sanitary ware with modern and durable designs.
 </p>
 </div>
 
-<!-- CARD -->
+<!-- CARD 2 -->
 
 <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg">
-<h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+<h3 class="text-lg md:text-xl font-semibold mb-3">
 Wide Collection
 </h3>
-<p class="text-gray-300 text-sm md:text-base leading-relaxed">
+<p class="text-gray-300 text-sm md:text-base">
 Explore tiles for bathroom, kitchen, living room, outdoor and commercial spaces.
 </p>
 </div>
 
-<!-- CARD -->
+<!-- CARD 3 -->
 
 <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg">
-<h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+<h3 class="text-lg md:text-xl font-semibold mb-3">
 Trusted Service
 </h3>
-<p class="text-gray-300 text-sm md:text-base leading-relaxed">
+<p class="text-gray-300 text-sm md:text-base">
 We help customers choose the best tiles and sanitary products for their homes.
 </p>
 </div>
 
-<!-- CONTACT BLOCKS -->
+<!-- CONTACT -->
 
 <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg">
-<h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+<h3 class="text-lg md:text-xl font-semibold mb-3">
 Manager
 </h3>
 <p class="text-gray-300 text-sm md:text-base">
@@ -98,7 +104,7 @@ Saurabh Verma
 </div>
 
 <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg">
-<h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+<h3 class="text-lg md:text-xl font-semibold mb-3">
 Contact
 </h3>
 <p class="text-gray-300 text-sm md:text-base">
@@ -110,7 +116,7 @@ Contact
 </div>
 
 <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg">
-<h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+<h3 class="text-lg md:text-xl font-semibold mb-3">
 Address
 </h3>
 <p class="text-gray-300 text-sm md:text-base">
@@ -125,4 +131,3 @@ Arjanipur, Parsrampur-Basti
 </section>
 
 {% endblock %}
-

@@ -1,0 +1,98 @@
+/* ============================= */
+/* 🔥 GLOBAL MOBILE RESPONSIVE FIX */
+/* ============================= */
+
+/* Prevent overflow */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text scaling */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.2rem !important;
+  }
+
+  p {
+    font-size: 0.9rem !important;
+  }
+
+  /* Padding fix */
+  .px-6 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .py-12 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+}
+
+/* ============================= */
+/* 🔥 GRID AUTO RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+}
+
+/* ============================= */
+/* 🔥 BUTTON FIX */
+/* ============================= */
+
+@media (max-width: 768px) {
+  button, .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ============================= */
+/* 🔥 CARD / IMAGE FIX */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .h-56 {
+    height: auto !important;
+  }
+}
+
+/* ============================= */
+/* 🔥 WHATSAPP FIX */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .fixed {
+    bottom: 16px !important;
+    right: 16px !important;
+  }
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
