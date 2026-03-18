@@ -4,21 +4,18 @@
 {% block content %}
 
 <!-- ================= HERO ================= -->
-<section class="relative w-full min-h-[100svh] overflow-hidden">
+<section class="relative w-full h-[100dvh] overflow-hidden">
 
-<!-- BACKGROUND -->
 <img src="{% static 'images/home4.jpg' %}" 
 class="absolute inset-0 w-full h-full object-cover object-center">
 
-<!-- OVERLAY -->
 <div class="absolute inset-0 bg-black/50"></div>
 
-<!-- CONTENT -->
-<div class="relative z-10 flex flex-col justify-center items-center min-h-[100svh] text-center px-4">
+<div class="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
 
 <div class="max-w-xl w-full text-white">
 
-<h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+<h1 class="text-4xl md:text-6xl font-bold mb-4">
 Prema Agency
 </h1>
 
@@ -28,13 +25,11 @@ Premium Tiles & Sanitary Ware in Parsrampur
 
 <div class="flex flex-col gap-4 w-full max-w-md mx-auto">
 
-<a href="/tiles" 
-class="bg-green-500 hover:bg-green-600 hover:scale-105 duration-300 text-white py-3 rounded-lg">
+<a href="/tiles" class="bg-green-500 py-3 rounded-lg">
 Explore Tiles
 </a>
 
-<a href="/sanitary" 
-class="bg-green-500 hover:bg-green-600 hover:scale-105 duration-300 text-white py-3 rounded-lg">
+<a href="/sanitary" class="bg-green-500 py-3 rounded-lg">
 Explore Sanitary Ware
 </a>
 
