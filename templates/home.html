@@ -4,18 +4,21 @@
 {% block content %}
 
 <!-- ================= HERO ================= -->
-<section class="relative w-full h-[100vh] overflow-hidden">
+<section class="relative w-full min-h-[100svh] overflow-hidden">
 
+<!-- BACKGROUND -->
 <img src="{% static 'images/home4.jpg' %}" 
 class="absolute inset-0 w-full h-full object-cover object-center">
 
+<!-- OVERLAY -->
 <div class="absolute inset-0 bg-black/50"></div>
 
-<div class="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
+<!-- CONTENT -->
+<div class="relative z-10 flex flex-col justify-center items-center min-h-[100svh] text-center px-4">
 
 <div class="max-w-xl w-full text-white">
 
-<h1 class="text-3xl md:text-5xl font-bold mb-4">
+<h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
 Prema Agency
 </h1>
 
@@ -26,21 +29,23 @@ Premium Tiles & Sanitary Ware in Parsrampur
 <div class="flex flex-col gap-4 w-full max-w-md mx-auto">
 
 <a href="/tiles" 
-class="bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg">
+class="bg-green-500 hover:bg-green-600 hover:scale-105 duration-300 text-white py-3 rounded-lg">
 Explore Tiles
 </a>
 
 <a href="/sanitary" 
-class="bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg">
+class="bg-green-500 hover:bg-green-600 hover:scale-105 duration-300 text-white py-3 rounded-lg">
 Explore Sanitary Ware
 </a>
 
 </div>
+
 </div>
 </div>
 </section>
-<!-- ================= WHY SECTION ================= -->
 
+
+<!-- ================= WHY SECTION ================= -->
 <section class="bg-gray-900 text-white py-16 md:py-24">
 
 <div class="max-w-6xl mx-auto px-4 text-center">
@@ -51,39 +56,39 @@ Why Choose Prema Agency
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-<div class="bg-gray-800 p-6 rounded-xl">
+<div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
 <h3 class="text-lg font-semibold mb-2">Premium Quality</h3>
 <p class="text-gray-300 text-sm">
 High-quality tiles and sanitary ware with modern designs.
 </p>
 </div>
 
-<div class="bg-gray-800 p-6 rounded-xl">
+<div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
 <h3 class="text-lg font-semibold mb-2">Wide Collection</h3>
 <p class="text-gray-300 text-sm">
 Bathroom, kitchen, outdoor & commercial solutions.
 </p>
 </div>
 
-<div class="bg-gray-800 p-6 rounded-xl">
+<div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
 <h3 class="text-lg font-semibold mb-2">Trusted Service</h3>
 <p class="text-gray-300 text-sm">
 We help you choose the best products easily.
 </p>
 </div>
 
-<div class="bg-gray-800 p-6 rounded-xl">
+<div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
 <h3 class="text-lg font-semibold mb-2">Manager</h3>
 <p class="text-gray-300 text-sm">Saurabh Verma</p>
 </div>
 
-<div class="bg-gray-800 p-6 rounded-xl">
+<div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
 <h3 class="text-lg font-semibold mb-2">Contact</h3>
 <p class="text-gray-300 text-sm">+91 7985995508</p>
 <p class="text-gray-300 text-sm">+91 9838209348</p>
 </div>
 
-<div class="bg-gray-800 p-6 rounded-xl">
+<div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
 <h3 class="text-lg font-semibold mb-2">Address</h3>
 <p class="text-gray-300 text-sm">
 Arjanipur, Parsrampur-Basti
@@ -93,7 +98,6 @@ Arjanipur, Parsrampur-Basti
 </div>
 
 </div>
-
 </section>
 
 {% endblock %}
