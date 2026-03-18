@@ -4,22 +4,18 @@
 {% block content %}
 
 <!-- ================= HERO ================= -->
+<section class="relative w-full h-[100vh] overflow-hidden">
 
-<section class="relative w-full h-screen overflow-hidden">
+<img src="{% static 'images/home4.jpg' %}" 
+class="absolute inset-0 w-full h-full object-cover object-center">
 
-<!-- BACKGROUND -->
-<img src="{% static 'images/home3.jpg' %}" 
-class="absolute inset-0 w-full h-full object-cover">
-
-<!-- OVERLAY -->
 <div class="absolute inset-0 bg-black/50"></div>
 
-<!-- CONTENT -->
 <div class="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
 
 <div class="max-w-xl w-full text-white">
 
-<h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+<h1 class="text-3xl md:text-5xl font-bold mb-4">
 Prema Agency
 </h1>
 
@@ -30,17 +26,16 @@ Premium Tiles & Sanitary Ware in Parsrampur
 <div class="flex flex-col gap-4 w-full max-w-md mx-auto">
 
 <a href="/tiles" 
-class="bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg font-medium transition text-center w-full">
+class="bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg">
 Explore Tiles
 </a>
 
 <a href="/sanitary" 
-class="bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg font-medium transition text-center w-full">
+class="bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg">
 Explore Sanitary Ware
 </a>
 
 </div>
-
 </div>
 </div>
 </section>
