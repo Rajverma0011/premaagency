@@ -4,13 +4,16 @@
 {% block content %}
 
 <!-- ================= HERO ================= -->
-<section class="relative w-full h-[100dvh] overflow-hidden">
+<section class="relative w-full overflow-hidden" style="height: 100dvh;">
 
+<!-- IMAGE (FIXED LIKE DEVTOOLS) -->
 <img src="{% static 'images/back4.jpg' %}"  
-class="absolute inset-0 w-full h-full object-cover object-center scale-140" >
+class="hero-img">
 
+<!-- OVERLAY -->
 <div class="absolute inset-0 bg-black/50"></div>
 
+<!-- CONTENT -->
 <div class="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
 
 <div class="max-w-xl w-full text-white">
@@ -25,11 +28,11 @@ Premium Tiles & Sanitary Ware in Parsrampur
 
 <div class="flex flex-col gap-4 w-full max-w-md mx-auto">
 
-<a href="/tiles" class="bg-green-500 py-3 rounded-lg">
+<a href="/tiles" class="bg-green-500 hover:bg-green-600 py-3 rounded-lg transition">
 Explore Tiles
 </a>
 
-<a href="/sanitary" class="bg-green-500 py-3 rounded-lg">
+<a href="/sanitary" class="bg-green-500 hover:bg-green-600 py-3 rounded-lg transition">
 Explore Sanitary Ware
 </a>
 
