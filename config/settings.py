@@ -35,7 +35,11 @@ SECRET_KEY = 'django-insecure-yd^la&9)1h3xbqm8-i2p_eaj64gwo)v-=)w3*sg6=a)2*@hob&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "premaagency.onrender.com",
+    "www.premaagency.in",
+    "premaagency.in"
+]
 
 
 # Application definition
