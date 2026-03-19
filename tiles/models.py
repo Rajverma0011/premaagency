@@ -1,4 +1,7 @@
 from django.db import models
+from cloudinary.models import CloudinaryField   # 🔥 ADD THIS
+
+
 class Tile(models.Model):
 
     CATEGORY_CHOICES = [
@@ -16,8 +19,13 @@ class Tile(models.Model):
     material = models.CharField(max_length=100)
     color = models.CharField(max_length=100)
     price = models.IntegerField()
-    image = models.ImageField(upload_to="tiles/")
+
+    # 🔥 CHANGE HERE
+    image = CloudinaryField('image')
+
     description = models.TextField()
+
+
 class ContactMessage(models.Model):
 
     name = models.CharField(max_length=200)
@@ -27,7 +35,8 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+
 class Sanitary(models.Model):
 
     CATEGORY_CHOICES = [
@@ -41,7 +50,10 @@ class Sanitary(models.Model):
     category = models.CharField(max_length=100, choices=CATEGORY_CHOICES)
     brand = models.CharField(max_length=100)
     price = models.IntegerField()
-    image = models.ImageField(upload_to="sanitary/")
+
+    # 🔥 CHANGE HERE ALSO
+    image = CloudinaryField('image')
+
     description = models.TextField()
 
     def __str__(self):
