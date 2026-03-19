@@ -2,24 +2,21 @@ import os
 from dotenv import load_dotenv
 import django
 
-# LOAD ENV VARIABLES
 load_dotenv()
-
-# DEBUG CHECK (temporary)
-print("API KEY:", os.getenv("API_KEY"))
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 django.setup()
 
 import cloudinary
+import cloudinary.uploader
+
+from tiles.models import Tile, Sanitary
 
 cloudinary.config(
     cloud_name=os.getenv("CLOUD_NAME"),
     api_key=os.getenv("API_KEY"),
     api_secret=os.getenv("API_SECRET")
 )
-from tiles.models import Tile, Sanitary
-import cloudinary.uploader
 
 
 def upload_image(instance, field_name):
@@ -28,7 +25,11 @@ def upload_image(instance, field_name):
     if not field:
         return
 
-    file_path = field.path
+    try:
+        file_path = field.path
+    except:
+        print("⚠ No local file, skipping")
+        return
 
     if not os.path.exists(file_path):
         print(f"❌ File not found: {file_path}")
@@ -39,8 +40,9 @@ def upload_image(instance, field_name):
 
         response = cloudinary.uploader.upload(file_path)
 
-        field.name = response['public_id'] + "." + response['format']
-        instance.save()
+        # 🔥 FORCE UPDATE (IMPORTANT)
+        field.name = response['public_id']
+        instance.save(update_fields=[field_name])
 
         print(f"✅ Uploaded: {response['secure_url']}")
 
@@ -59,7 +61,7 @@ def migrate_sanitary():
 
 
 if __name__ == "__main__":
-    print("🚀 Starting migration...")
+    print("🚀 FORCE MIGRATION START")
     migrate_tiles()
     migrate_sanitary()
-    print("🎉 Done!")
+    print("🎉 DONE!")
